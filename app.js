@@ -14,3 +14,4 @@ function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) // or you can use possibleChoices.length //
     console.log(randomNumber)
 }
+
