@@ -9,6 +9,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
     userChoice = e.target.id 
     userChoiceDisplay.innerHTML = userChoice
     generateComputerChoice()
+    getResult()
 }))
 
 
@@ -25,5 +26,31 @@ function generateComputerChoice() {
         computerChoice = 'paper'
     }
     computerChoiceDisplay.innerHTML = computerChoice
+}
+
+function getResult() {
+    if (computerChoice === userChoice) {
+        result = "Look at that Ya'll think alike !! "
+    }
+    if (computerChoice === 'rock' && userChoice === 'paper') {
+        result = 'That is a WRAP!! around that rock cuz you WON!'
+    }
+    if (computerChoice === 'rock' && userChoice === 'scissors') {
+        result = ' OH!! Snap!! is what your scissor did !!'
+    }
+    if (computerChoice === 'paper' && userChoice === 'scissors') {
+        result = ' Slice!!! of that paper pie cuz you WON!!'
+    }
+    if (computerChoice === 'paper' && userChoice === 'rock') {
+        result = ' Who thought a Paper could beat a Rock :( '
+    }
+    if (computerChoice === 'scissors' && userChoice === 'rock') {
+        result = " Can't cut nothing after that hit cuz you WON!!"
+    }
+    if (computerChoice === 'scissors' && userChoice === 'paper') {
+        result = " You could always say it's confetti  "
+    }
+    resultDisplay.innerHTML = result
+
 }
 
