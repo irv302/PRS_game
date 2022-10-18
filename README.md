@@ -10,3 +10,4 @@ HTML
 This was to hone my JavaScript 
 in order to see if I could make a random choice game 
 
+look
